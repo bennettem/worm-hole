@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
   Post.findAll({
     attributes: [
       'id',
-      'post_content',
+      'post_url',
       'title',
       'created_at'
     ],
@@ -49,7 +49,7 @@ router.get('/post/:id', (req, res) => {
     },
     attributes: [
       'id',
-      'post_content',
+      'post_url',
       'title',
       'created_at'
     ],
@@ -86,15 +86,6 @@ router.get('/post/:id', (req, res) => {
       res.status(500).json(err);
     });
 });
-
-// user signup
-router.get("/signup", (req, res) => {
-    if (req.session.loggedIn) {
-      res.redirect("/");
-      return;
-    }
-    res.render("signup");
-  });
 
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
