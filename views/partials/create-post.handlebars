@@ -1,7 +1,6 @@
-<h1>Dashboard</h1>
-
 <section>
-    <h2>Create New Post</h2>
+    <a href="/dashboard">back to dashboard</a>
+    <h2>create new blog post</h2>
 
     <form class="new-post-form">
         <div>
@@ -15,20 +14,7 @@
         </div>
         <button type="submit">create post</button>
     </form>
-</section>
 
-{{#if posts.length}}
-<section>
-    <h2>Your Posts</h2>
-    <ol>
-        {{#each posts as |post|}}
-        <li>
-            {{> post-info post}}
-            <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-        </li>
-        {{/each}}
-    </ol>
 </section>
-{{/if}}
 
 <script src="/javascript/add-post.js"></script>

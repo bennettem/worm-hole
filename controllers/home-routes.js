@@ -87,6 +87,15 @@ router.get('/post/:id', (req, res) => {
     });
 });
 
+// user signup
+router.get("/signup", (req, res) => {
+    if (req.session.loggedIn) {
+      res.redirect("/");
+      return;
+    }
+    res.render("signup");
+  });
+
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
