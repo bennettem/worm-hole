@@ -9,6 +9,8 @@
     margin: 0;
     font-family: sans-serif;
     color: #333;
+    justify-content: center;
+    text-align: center;
   }
   
   a {
