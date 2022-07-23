@@ -9,13 +9,12 @@
     margin: 0;
     font-family: sans-serif;
     color: #333;
-    justify-content: center;
-    text-align: center;
+    background-color: #3486eb;
   }
   
   a {
     text-decoration: none;
-    color: #225ca3;
+    color: purple;
     font-weight: bold;
     transition: color 0.1s;
   }
